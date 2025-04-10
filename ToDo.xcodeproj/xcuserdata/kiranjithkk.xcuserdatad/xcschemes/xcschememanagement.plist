@@ -6,8 +6,28 @@
 	<dict>
 		<key>ToDo.xcscheme_^#shared#^_</key>
 		<dict>
+			<key>isShown</key>
+			<true/>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>799812E42D8AC6CF00535F53</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>799812FA2D8AC6D200535F53</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>799813042D8AC6D200535F53</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

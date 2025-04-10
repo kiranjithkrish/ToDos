@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "8229E706-9462-48A1-9A20-1979F3F65495",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:ToDo.xcodeproj",
+        "identifier" : "79D950772D8C071A005828C1",
+        "name" : "ToDoTests"
+      }
+    }
+  ],
+  "version" : 1
+}
