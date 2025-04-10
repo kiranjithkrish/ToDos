@@ -45,6 +45,7 @@
 		79C7C02D2D91C1A400BD7733 /* Exceptions for "ToDoTests" folder in "ToDoTests" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				APIClientMock.swift,
 				ToDoItemCellTests.swift,
 				ToDoItemDetailsViewControllerTests.swift,
 				ToDoItemInputViewTests.swift,
