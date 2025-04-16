@@ -124,17 +124,55 @@ final class ToDoItemInputViewTests: XCTestCase {
         todoItemData.title = "dummy title"
         let expected = "dummy address"
         todoItemData.addressString = expected
+        try tapButtonWithName(name: "Save")
+            
+        XCTAssertEqual(apiClientMock.coordinateAddess, expected)
+    }
+    
+    func test_save_whenAddressEmpty_shouldNotFetchCoordinate() throws {
+        todoItemData.title = "dummy title"
+
+        try tapButtonWithName(name: "Save")
+            
+        XCTAssertNil(apiClientMock.coordinateAddess)
+    }
+    
+    func test_save_shouldCallDelegate() throws {
+        todoItemData.title = "dummy title"
+        todoItemData.addressString = "dummy address"
+        apiClientMock.coordinateReturnValue = Coordinate(latitude: 1, longitude: 2)
+        let delegateMock = ToDoItemInputViewDelegateMock()
+        sut.delegate = delegateMock
+        try tapButtonWithName(name: "Save")
+        
+        XCTAssertEqual(delegateMock.lastToDoItem?.title, "dummy title")
+        XCTAssertEqual(delegateMock.lastCoordinate?.latitude, 1)
+        XCTAssertEqual(delegateMock.lastCoordinate?.longitude, 2)
+        
+    }
+    
+    func test_save_whenAddressIsEmpty_shouldCallDelegate() throws {
+        todoItemData.title = "dummy title"
+       
+        let delegateMock = ToDoItemInputViewDelegateMock()
+        sut.delegate = delegateMock
+        try tapButtonWithName(name: "Save")
+        
+        XCTAssertEqual(delegateMock.lastToDoItem?.title, "dummy title")
+       
+    }
+}
+
+extension ToDoItemInputViewTests {
+    func tapButtonWithName(name: String) throws {
         try sut.inspect()
             .find(ViewType.Button.self, where: { view in
                 let label = try view
                     .labelView()
                     .text()
                     .string()
-                return label == "Save"
+                return label == name
             })
             .tap()
-            
-        XCTAssertEqual(apiClientMock.coordinateAddess, expected)
     }
-
 }

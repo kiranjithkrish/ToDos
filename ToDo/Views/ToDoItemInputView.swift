@@ -7,9 +7,14 @@
 
 import SwiftUI
 
+protocol ToDoItemInputViewDelegate {
+    func addToDoItem(with data: ToDoItemData, coordinate: Coordinate?)
+}
+
 struct ToDoItemInputView: View {
     @ObservedObject var data: ToDoItemData
     let apiClient: APIClientProtocol
+    var delegate: ToDoItemInputViewDelegate?
     
     
     var body: some View {
@@ -37,9 +42,14 @@ struct ToDoItemInputView: View {
     }
     
     func addToDoItem() {
-        apiClient.coordinate(for: data.addressString) { coordinate in
-            
+        if !data.addressString.isEmpty {
+            apiClient.coordinate(for: data.addressString) { coordinate in
+                self.delegate?.addToDoItem(with: data, coordinate: coordinate)
+            }
+        } else {
+            self.delegate?.addToDoItem(with: data, coordinate: nil)
         }
+        
     }
 }
 
