@@ -42,7 +42,7 @@ class APIClient: APIClientProtocol {
     }
     
     func fetchToDoItems() async throws -> [ToDoItem] {
-        guard let url = URL(string: "dummy") else {
+        guard let url = URL(string: "http://todo.app/items") else {
             return []
         }
         let request = URLRequest(url: url)

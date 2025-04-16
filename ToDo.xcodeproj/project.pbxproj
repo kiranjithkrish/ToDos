@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		797517842D9D1C1000C8C796 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 797517832D9D1C1000C8C796 /* ViewInspector */; };
 		79D3C8762DAEB2FA0012CD15 /* URLSessionProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D3C8752DAEB2FA0012CD15 /* URLSessionProtocolMock.swift */; };
+		79D3C8792DAFD8C20012CD15 /* AppSetupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D3C8772DAFD8C20012CD15 /* AppSetupTests.swift */; };
+		79D3C87A2DAFDB6D0012CD15 /* ToDoItemsListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E073132DA9264D00613A25 /* ToDoItemsListViewControllerTests.swift */; };
+		79D3C87B2DAFDB7A0012CD15 /* ToDoItemStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E073142DA9264D00613A25 /* ToDoItemStoreTests.swift */; };
+		79D3C87C2DAFDB930012CD15 /* LocationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E0730D2DA9264D00613A25 /* LocationTests.swift */; };
+		79D3C87D2DAFDBA70012CD15 /* ToDoItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E073152DA9264D00613A25 /* ToDoItemTests.swift */; };
+		79D3C87E2DAFDBB20012CD15 /* ToDoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E073162DA9264D00613A25 /* ToDoTests.swift */; };
+		79D3C8802DAFE3D10012CD15 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D3C87F2DAFE3D00012CD15 /* AppCoordinator.swift */; };
+		79D3C8822DAFECDB0012CD15 /* AppCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D3C8812DAFECDB0012CD15 /* AppCoordinatorTests.swift */; };
+		79D3C8842DAFEDDA0012CD15 /* NavigationControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D3C8832DAFEDDA0012CD15 /* NavigationControllerMock.swift */; };
 		79E072F72DA925A800613A25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79E072E42DA925A800613A25 /* Assets.xcassets */; };
 		79E072F92DA925A800613A25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79E072E92DA925A800613A25 /* LaunchScreen.storyboard */; };
 		79E072FA2DA925A800613A25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79E072EC2DA925A800613A25 /* Main.storyboard */; };
@@ -58,6 +67,10 @@
 		799812E52D8AC6CF00535F53 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		799813052D8AC6D200535F53 /* ToDoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D3C8752DAEB2FA0012CD15 /* URLSessionProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocolMock.swift; sourceTree = "<group>"; };
+		79D3C8772DAFD8C20012CD15 /* AppSetupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSetupTests.swift; sourceTree = "<group>"; };
+		79D3C87F2DAFE3D00012CD15 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		79D3C8812DAFECDB0012CD15 /* AppCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorTests.swift; sourceTree = "<group>"; };
+		79D3C8832DAFEDDA0012CD15 /* NavigationControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerMock.swift; sourceTree = "<group>"; };
 		79D950782D8C071A005828C1 /* ToDoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D950C62D8C09AB005828C1 /* ToDo.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = ToDo.xctestplan; sourceTree = "<group>"; };
 		79E072E22DA925A800613A25 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -163,6 +176,7 @@
 				79E072EC2DA925A800613A25 /* Main.storyboard */,
 				79E072ED2DA925A800613A25 /* SceneDelegate.swift */,
 				79E072F52DA925A800613A25 /* ViewController.swift */,
+				79D3C87F2DAFE3D00012CD15 /* AppCoordinator.swift */,
 			);
 			path = ToDo;
 			sourceTree = "<group>";
@@ -204,6 +218,8 @@
 				79E073202DA9265100613A25 /* Mocks */,
 				79E0730D2DA9264D00613A25 /* LocationTests.swift */,
 				79E0730E2DA9264D00613A25 /* ToDoItemCellTests.swift */,
+				79D3C8772DAFD8C20012CD15 /* AppSetupTests.swift */,
+				79D3C8812DAFECDB0012CD15 /* AppCoordinatorTests.swift */,
 				79E0730F2DA9264D00613A25 /* ToDoItemDetailsViewControllerTests.swift */,
 				79E073112DA9264D00613A25 /* ToDoItemInputViewTests.swift */,
 				79E073132DA9264D00613A25 /* ToDoItemsListViewControllerTests.swift */,
@@ -224,6 +240,7 @@
 				79E073122DA9264D00613A25 /* ToDoItemsListViewControllerProtocolMock.swift */,
 				79E073242DA92C2500613A25 /* GeoCoderProtocolMock.swift */,
 				79D3C8752DAEB2FA0012CD15 /* URLSessionProtocolMock.swift */,
+				79D3C8832DAFEDDA0012CD15 /* NavigationControllerMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -393,6 +410,7 @@
 				79E073042DA925A800613A25 /* ToDoItemDetailsViewController.swift in Sources */,
 				79E073052DA925A800613A25 /* ToDoItemInputView.swift in Sources */,
 				79E073062DA925A800613A25 /* ToDoItemsListViewController.swift in Sources */,
+				79D3C8802DAFE3D10012CD15 /* AppCoordinator.swift in Sources */,
 				79E073072DA925A800613A25 /* ToDoItemStore.swift in Sources */,
 				79E073082DA925A800613A25 /* ViewController.swift in Sources */,
 			);
@@ -409,16 +427,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79D3C87B2DAFDB7A0012CD15 /* ToDoItemStoreTests.swift in Sources */,
 				79E073192DA9264D00613A25 /* ToDoItemInputViewTests.swift in Sources */,
 				79E0731A2DA9264D00613A25 /* APIClientMock.swift in Sources */,
+				79D3C8822DAFECDB0012CD15 /* AppCoordinatorTests.swift in Sources */,
+				79D3C87E2DAFDBB20012CD15 /* ToDoTests.swift in Sources */,
+				79D3C87D2DAFDBA70012CD15 /* ToDoItemTests.swift in Sources */,
 				79E0731B2DA9264D00613A25 /* ToDoItemInputViewDelegateMock.swift in Sources */,
+				79D3C87C2DAFDB930012CD15 /* LocationTests.swift in Sources */,
 				79E073232DA928F400613A25 /* APIClientTests.swift in Sources */,
 				79E0731C2DA9264D00613A25 /* ToDoItemCellTests.swift in Sources */,
+				79D3C8792DAFD8C20012CD15 /* AppSetupTests.swift in Sources */,
 				79E0731D2DA9264D00613A25 /* ToDoItemDetailsViewControllerTests.swift in Sources */,
+				79D3C87A2DAFDB6D0012CD15 /* ToDoItemsListViewControllerTests.swift in Sources */,
 				79E0731E2DA9264D00613A25 /* ToDoItemsListViewControllerProtocolMock.swift in Sources */,
 				79E0731F2DA9264D00613A25 /* ToItemStoreProtocolMock.swift in Sources */,
 				79D3C8762DAEB2FA0012CD15 /* URLSessionProtocolMock.swift in Sources */,
 				79E073252DA92C2500613A25 /* GeoCoderProtocolMock.swift in Sources */,
+				79D3C8842DAFEDDA0012CD15 /* NavigationControllerMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
