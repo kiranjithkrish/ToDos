@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import SwiftUI
 @testable import ToDo
 
 final class AppCoordinatorTests: XCTestCase {
@@ -39,5 +40,31 @@ final class AppCoordinatorTests: XCTestCase {
         let listViewController = try XCTUnwrap(navigationControllerMock.lastPushedViewController as? ToDoItemsListViewController)
         XCTAssertNotNil(listViewController.todoItemStore)
     }
+    
+    func test_selectToDoItem_pushesDetails() throws {
+        let dummyVC = UIViewController()
+        let item = ToDoItem(title: "dummy")
+        sut.selectToDoItem(dummyVC, item: item)
+        let detail = try XCTUnwrap(navigationControllerMock.lastPushedViewController as? ToDoItemDetailsViewController)
+        XCTAssertEqual(detail.todoItem, item)
+        
+    }
+    
+    func test_selectToDoItem_shouldSetToDoItemStore() throws {
+        let dummyVC = UIViewController()
+        let item = ToDoItem(title: "dummy")
+        sut.selectToDoItem(dummyVC, item: item)
+        let detail = try XCTUnwrap(navigationControllerMock.lastPushedViewController as? ToDoItemDetailsViewController)
+        XCTAssertIdentical(detail.todoStore as? ToDoItemStore, sut.todoItemsStore)
+    }
+    
+    func test_addToDoItem_shouldPresentInputView() throws {
+        let viewControllerMock = ViewControllerMock()
+        sut.addToDoItem(viewControllerMock)
+        let lastPresented = try XCTUnwrap(viewControllerMock.lastPresented as? UIHostingController<ToDoItemInputView>)
+        XCTAssertIdentical(lastPresented.rootView.delegate as? AppCoordinator, sut)
+    }
+    
+   
 
 }

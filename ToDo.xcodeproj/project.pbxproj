@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		797517842D9D1C1000C8C796 /* ViewInspector in Frameworks */ = {isa = PBXBuildFile; productRef = 797517832D9D1C1000C8C796 /* ViewInspector */; };
+		7977ECC12DB14ECD00DE3DEF /* ViewControllerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7977ECC02DB14ECD00DE3DEF /* ViewControllerMock.swift */; };
 		79D3C8762DAEB2FA0012CD15 /* URLSessionProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D3C8752DAEB2FA0012CD15 /* URLSessionProtocolMock.swift */; };
 		79D3C8792DAFD8C20012CD15 /* AppSetupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D3C8772DAFD8C20012CD15 /* AppSetupTests.swift */; };
 		79D3C87A2DAFDB6D0012CD15 /* ToDoItemsListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E073132DA9264D00613A25 /* ToDoItemsListViewControllerTests.swift */; };
@@ -64,6 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7977ECC02DB14ECD00DE3DEF /* ViewControllerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerMock.swift; sourceTree = "<group>"; };
 		799812E52D8AC6CF00535F53 /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		799813052D8AC6D200535F53 /* ToDoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D3C8752DAEB2FA0012CD15 /* URLSessionProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocolMock.swift; sourceTree = "<group>"; };
@@ -215,7 +217,7 @@
 		79E073182DA9264D00613A25 /* ToDoTests */ = {
 			isa = PBXGroup;
 			children = (
-				79E073202DA9265100613A25 /* Mocks */,
+				79E073202DA9265100613A25 /* Doubles */,
 				79E0730D2DA9264D00613A25 /* LocationTests.swift */,
 				79E0730E2DA9264D00613A25 /* ToDoItemCellTests.swift */,
 				79D3C8772DAFD8C20012CD15 /* AppSetupTests.swift */,
@@ -231,7 +233,7 @@
 			path = ToDoTests;
 			sourceTree = "<group>";
 		};
-		79E073202DA9265100613A25 /* Mocks */ = {
+		79E073202DA9265100613A25 /* Doubles */ = {
 			isa = PBXGroup;
 			children = (
 				79E0730C2DA9264D00613A25 /* APIClientMock.swift */,
@@ -241,8 +243,9 @@
 				79E073242DA92C2500613A25 /* GeoCoderProtocolMock.swift */,
 				79D3C8752DAEB2FA0012CD15 /* URLSessionProtocolMock.swift */,
 				79D3C8832DAFEDDA0012CD15 /* NavigationControllerMock.swift */,
+				7977ECC02DB14ECD00DE3DEF /* ViewControllerMock.swift */,
 			);
-			path = Mocks;
+			path = Doubles;
 			sourceTree = "<group>";
 		};
 		79E073212DA9289B00613A25 /* Extensions */ = {
@@ -435,6 +438,7 @@
 				79D3C87D2DAFDBA70012CD15 /* ToDoItemTests.swift in Sources */,
 				79E0731B2DA9264D00613A25 /* ToDoItemInputViewDelegateMock.swift in Sources */,
 				79D3C87C2DAFDB930012CD15 /* LocationTests.swift in Sources */,
+				7977ECC12DB14ECD00DE3DEF /* ViewControllerMock.swift in Sources */,
 				79E073232DA928F400613A25 /* APIClientTests.swift in Sources */,
 				79E0731C2DA9264D00613A25 /* ToDoItemCellTests.swift in Sources */,
 				79D3C8792DAFD8C20012CD15 /* AppSetupTests.swift in Sources */,

@@ -10,6 +10,7 @@ import Combine
 
 protocol ToDoItemsListViewControllerProtocol {
     func selectToDoItem(_ viewController: UIViewController, item: ToDoItem)
+    func addToDoItem(_ viewController: UIViewController)
 }
 
 class ToDoItemsListViewController: UIViewController {
@@ -45,6 +46,13 @@ class ToDoItemsListViewController: UIViewController {
                 self?.update(with: items)
             })
         tableView.delegate = self
+        
+        let addItem = UIBarButtonItem(title: "+", style: .plain, target: self, action: #selector(add(_ :)))
+        navigationItem.rightBarButtonItem = addItem
+    }
+    
+    @objc func add(_ sender: UIBarButtonItem) {
+        delegate?.addToDoItem(self)
     }
     
     private func update(with items: [ToDoItem]) {

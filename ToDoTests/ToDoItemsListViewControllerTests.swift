@@ -95,4 +95,14 @@ final class ToDoItemsListViewControllerTests: XCTestCase {
         tableView.delegate?.tableView?(tableView, didSelectRowAt: indexPath)
         XCTAssertEqual(delegateMock.selectedToDoItemReceivedArguments?.item, todoItem)
     }
+    
+    func test_navigationBarButton_shouldCallDelegate() throws {
+        let delegateMock = ToDoItemsListViewControllerProtocolMock()
+        sut.delegate = delegateMock
+        let addButton = sut.navigationItem.rightBarButtonItem
+        let target = try XCTUnwrap(addButton?.target)
+        let action = try XCTUnwrap(addButton?.action)
+        _ = target.perform(action, with: addButton)
+        XCTAssertEqual(delegateMock.addToDoItemCallCount, 1)
+    }
 }
